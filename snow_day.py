@@ -42,8 +42,9 @@ def homepage():
 
 @ask.launch
 def start_skill():
-    welcome_message = "Welcome to snow day,  how can I help?"
-    return question(welcome_message)
+    weather = get_weather()
+    report = "Today's report is: {}".format(weather)
+    return statement(report)
     
 @ask.intent("YesIntent")
 def share_weather():
