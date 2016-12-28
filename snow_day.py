@@ -37,7 +37,10 @@ def get_weather():
     
 @app.route("/")
 def homepage():
-    return "Snow Day skill for ALEXA"
+    weather = get_weather()
+    report = "Today's report is: {}".format(weather)
+    return statement(report)
+    #return "Snow Day skill for ALEXA"
    
 
 @ask.launch
