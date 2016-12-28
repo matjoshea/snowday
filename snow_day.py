@@ -38,10 +38,11 @@ def get_weather():
 @app.route("/")
 def homepage():
     return "Snow Day skill for ALEXA"
-    
-@ask.launch()
+   
+
+@ask.launch
 def start_skill():
-    welcome_message = "Welcome to snow day. How can I help?"
+    welcome_message = "Welcome to snow day,  how can I help?"
     return question(welcome_message)
     
 @ask.intent("YesIntent")
