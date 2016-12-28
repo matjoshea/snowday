@@ -13,7 +13,7 @@ import urllib.request
 
 
 app = Flask(__name__)
-ask = Ask(app, "snowday")
+ask = Ask(app, "/snowday")
 
 def get_weather():
     sauce = urllib.request.urlopen('http://www.weny.com/school-closings').read()
