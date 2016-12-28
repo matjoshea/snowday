@@ -39,7 +39,7 @@ def get_weather():
 def homepage():
     weather = get_weather()
     report = "Today's report is: {}".format(weather)
-    return statement(report)
+    return report
     #return "Snow Day skill for ALEXA"
    
 
